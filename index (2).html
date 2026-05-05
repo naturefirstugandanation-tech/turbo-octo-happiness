@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)file:///C:/Users/DELL/Downloads/giraweb.html#water -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Nature First Uganda: Building a Greener Nation</title>
+    <meta name="description" content="A platform promoting environmental conservation in Uganda through education, clean practices, and community involvement.">
+    <style>
+        /* ---------- CSS VARIABLES & RESET ---------- */
+        :root {
+            --primary-green: #1B5E20;
+            --light-green: #E8F5E9;
+            --accent-gold: #F9A825;
+            --text-dark: #1e2a2e;
+            --text-light: #2d3e42;
+            --white: #ffffff;
+            --bg-gray: #f4f7f4;
+            --shadow: 0 12px 24px rgba(0,0,0,0.08);
+            --radius: 20px;
+            --font-main: 'Segoe UI', 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+            --transition: all 0.25s ease-in-out;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-dark);
+            background: var(--pink);
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        /* smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* ---------- TYPOGRAPHY & UTILITY ---------- */
+        .container {
+            width: 90%;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 5rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        section:nth-child(even) {
+            background-color: var(--bg-gray);
+        }
+
+        h2 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            color: var(--primary-green);
+            text-align: center;
+            margin-bottom: 1.2rem;
+            letter-spacing: -0.01em;
+        }
+
+        .section-subhead {
+            text-align: center;
+            max-width: 780px;
+            margin: 0 auto 2.5rem auto;
+            font-size: 1.15rem;
+            color: #2c5a2e;
+            background: rgba(27,94,32,0.05);
+            padding: 0.8rem 1.5rem;
+            border-radius: 60px;
+            backdrop-filter: blur(2px);
+        }
+
+        p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        /* ---------- HEADER & NAV (fixed) ---------- */
+        header {
+            background: rgba(27, 94, 32, 0.96);
+            backdrop-filter: blur(8px);
+            color: white;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1100;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+            transition: var(--transition);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.8rem 0;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 800;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: -0.3px;
+        }
+        .logo span {
+            color: var(--accent-gold);
+            background: rgba(0,0,0,0.2);
+            padding: 0 6px;
+            border-radius: 30px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
+            padding: 0.5rem 0.9rem;
+            border-radius: 40px;
+            transition: var(--transition);
+            background: rgba(255,255,255,0.05);
+        }
+
+        nav a:hover {
+            background: var(--accent-gold);
+            color: #1e3a1e;
+            transform: translateY(-2px);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: pink;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* ---------- HERO SECTION (fullscreen) ---------- */
+        #home {
+            min-height: 100vh;
+            background: linear-gradient(115deg, rgba(0,0,0,0.65), rgba(0,30,0,0.7)), url('https://images.pexels.com/photos/808465/pexels-photo-808465.jpeg?auto=compress&cs=tinysrgb&w=1600') center/cover fixed;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: blue;
+            padding: 0;
+        }
+
+        #home .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        #home h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-shadow: 2px 4px 12px rgba(0,0,0,0.4);
+            letter-spacing: -0.02em;
+        }
+
+        #home p {
+            color: rgba(255,255,240,0.95);
+            font-size: 1.35rem;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: var(--accent-gold);
+            color: #1e3a1e;
+            padding: 0.9rem 2rem;
+            text-decoration: none;
+            border-radius: 60px;
+            font-weight: 700;
+            transition: var(--transition);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        .btn:hover {
+            background: #ffb300;
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* ---------- CARDS & GRIDS ---------- */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+            gap: 2rem;
+            margin-top: 2.5rem;
+        }
+
+        .card {
+            background: pink;
+            padding: 1.6rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            text-align: center;
+            border: 1px solid #eff3e9;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
+        }
+
+        .card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 1.2rem;
+        }
+
+        .card h3 {
+            color: var(--primary-green);
+            font-size: 1.4rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .card p {
+            font-size: 0.96rem;
+            text-align: center;
+        }
+
+        /* ---------- POLLUTION FLEX LAYOUT ---------- */
+        .pollution-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .pollution-col {
+            flex: 1;
+            min-width: 270px;
+            background: white;
+            padding: 1.8rem;
+            border-radius: 28px;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s;
+            border-top: 6px solid;
+        }
+
+        .pollution-col.cause { border-color: #00dee6; }
+        .pollution-col.impact { border-color: #8718c2; }
+        .pollution-col.solution { border-color: #6d6b6d; }
+
+        .pollution-col h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        .pollution-col ul {
+            padding-left: 1.2rem;
+        }
+        .pollution-col li {
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+            line-height: 1.4;
+        }
+
+        /* ---------- COMMUNITY SECTION (custom) ---------- */
+        .community-wrapper {
+            display: flex;
+            gap: 2.5rem;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 2rem;
+        }
+        .community-img {
+            flex: 1;
+            min-width: 280px;
+        }
+        .community-img img {
+            width: 100%;
+            border-radius: 32px;
+            box-shadow: var(--shadow);
+            object-fit: cover;
+            height: 320px;
+        }
+        .community-text {
+            flex: 1;
+            background: rgb(226, 162, 139);
+            padding: 2rem;
+            border-radius: 28px;
+            box-shadow: var(--shadow);
+        }
+        .community-text h3 {
+            color: var(--primary-green);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        .community-text ul {
+            margin-top: 1rem;
+            list-style: none;
+        }
+        .community-text li {
+            margin-bottom: 0.8rem;
+            padding-left: 1.6rem;
+            position: relative;
+        }
+        .community-text li::before {
+            content: "🌱";
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        /* ---------- CONTACT FORM ---------- */
+        .contact-box {
+            max-width: 700px;
+            margin: 2rem auto 0;
+            background: lightblue;
+            padding: 2.5rem;
+            border-radius: 32px;
+            box-shadow: var(--shadow);
+        }
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            display: block;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 0.9rem 1rem;
+            border: 1.5px solid #e0e7e0;
+            border-radius: 24px;
+            font-family: inherit;
+            transition: 0.2s;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-green);
+            box-shadow: 0 0 0 3px rgba(27,94,32,0.2);
+        }
+        .contact-info {
+            margin-top: 2rem;
+            text-align: center;
+            background: #f0f5ef;
+            padding: 1.2rem;
+            border-radius: 28px;
+        }
+        .contact-info p {
+            margin: 0.2rem 0;
+        }
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            background: #0e2b14;
+            color: #bcd0b5;
+            text-align: center;
+            padding: 2.5rem 0;
+        }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 840px) {
+            .nav-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            nav ul {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                margin-top: 1rem;
+                background: rgba(0,0,0,0.2);
+                border-radius: 28px;
+                padding: 1rem;
+            }
+            nav ul.show {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+                position: absolute;
+                right: 1.2rem;
+                top: 1rem;
+            }
+            #home h1 {
+                font-size: 2.5rem;
+            }
+            .pollution-flex {
+                flex-direction: column;
+            }
+            h2 {
+                font-size: 1.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-wrapper">
+        <div class="logo">🌍  Nature First Uganda <span>Nation</span></div>
+        <button class="menu-toggle" onclick="toggleMenu()" aria-label="Menu">☰</button>
+        <nav>
+            <ul id="nav-list">
+                <li><a href="file:///C:/Users/DELL/Downloads/giraweb.html#home" style="background: rgba(255, 255, 255, 0.05); color: white;">Home</a></li>
+                <li><a href="file:///C:/Users/DELL/Downloads/giraweb.html#resources" style="background: rgba(255, 255, 255, 0.05); color: white;">Resources</a></li>
+                <li><a href="file:///C:/Users/DELL/Downloads/giraweb.html#utilization" style="background: rgba(255, 255, 255, 0.05); color: white;">Utilization</a></li>
+                <li><a href="file:///C:/Users/DELL/Downloads/giraweb.html#community" style="background: var(--accent-gold); color: rgb(30, 58, 30);">Community</a></li>
+                <li><a href="file:///C:/Users/DELL/Downloads/giraweb.html#air" style="background: rgba(255, 255, 255, 0.05); color: white;">Air</a></li>
+                <li><a href="file:///C:/Users/DELL/Downloads/giraweb.html#water" style="background: rgba(255, 255, 255, 0.05); color: white;">Water</a></li>
+                <li><a href="file:///C:/Users/DELL/Downloads/giraweb.html#land" style="background: rgba(255, 255, 255, 0.05); color: white;">Land</a></li>
+                <li><a href="file:///C:/Users/DELL/Downloads/giraweb.html#contact" style="background: rgba(255, 255, 255, 0.05); color: white;">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <!-- HERO SECTION -->
+    <section id="home">
+        <div class="container hero-content">
+            <h1>Nature First Uganda# Nation</h1>
+            <p>Defending Uganda's environment through awareness, sustainable action, and community resilience.</p>
+            <a href="file:///C:/Users/DELL/Downloads/giraweb.html#resources" class="btn">Explore the Pearl 🌿</a>
+        </div>
+    </section>
+
+    <!-- RESOURCES SECTION -->
+    <section id="resources">
+        <div class="container">
+            <h2>🇺🇬 Local Treasures</h2>
+            <div class="section-subhead">Uganda — blessed with nature's abundance, we protect what sustains us.</div>
+            <div class="grid-3">
+                <div class="card">
+                    <img src="C:users/user/downloads/water.jfif" alt="Lake Victoria wetland" loading="lazy">
+                    <h3>Water Wealth</h3>
+                    <p>Lake Victoria, River Nile, and vast wetlands regulate climate and provide fresh water for millions.</p>
+                </div>
+                <div class="card">
+                    <img src="C:users/user/downloads/wildlife.jfif" alt="Mountain gorilla Bwindi" loading="lazy">
+                    <h3>Forests &amp; Wildlife</h3>
+                    <p>Mabira, Bwindi, and Mgahinga — home to gorillas, chimps, and over 1000 bird species.</p>
+                </div>
+                <div class="card">
+                    <img src="C:users/user/downloads/soil.jfif" alt="Ugandan fertile soil" loading="lazy">
+                    <h3>Fertile Soils</h3>
+                    <p>Volcanic soils that feed East Africa: matooke, coffee, maize, and sustainable agriculture.</p>
+                </div>
+                <div class="card">
+                    <img src="C:users/user/downloads/cobalt.jpg" alt="Mineral exploration" loading="lazy">
+                    <h3>Mineral Wealth</h3>
+                    <p>Copper, cobalt, gold, and oil reserves — we advocate ethical and eco-friendly extraction.</p>
+                </div>
+                <div class="card">
+                    <img src="C:users/user/downloads/bio.jpg" alt="Uganda biodiversity" loading="lazy">
+                    <h3>Biodiversity Hub</h3>
+                    <p>Over 18,000 species; 53% of world's mountain gorillas call Uganda home. A true natural ark.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EFFICIENT UTILIZATION -->
+    <section id="utilization">
+        <div class="container">
+            <h2>⚡ Efficient Utilization</h2>
+            <p>Smart use of resources today secures tomorrow. Uganda is shifting to renewables, regenerative farming, and water harvesting.</p>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>☀️ Renewable Energy</h3>
+                    <p>Solar mini-grids, biogas, and improved cookstoves reduce deforestation and indoor pollution in rural areas.</p>
+                </div>
+                <div class="card">
+                    <h3>🌾 Sustainable Farming</h3>
+                    <p>Agroecology, mulching, and organic manure preserve soil fertility and increase climate resilience.</p>
+                </div>
+                <div class="card">
+                    <h3>💧 Rainwater Harvesting</h3>
+                    <p>Communities collect rain to reduce pressure on Lake Victoria and ensure year-round clean water access.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMMUNITY DEVELOPMENT -->
+    <section id="community">
+        <div class="container">
+            <h2>🤝 Community-led Action</h2>
+            <div class="community-wrapper">
+                <div class="community-img">
+                    <img src="C:users/user/downloads/river.jpg" alt="Ugandan community conservation" loading="lazy">
+                </div>
+                <div class="community-text">
+                    <h3>Grassroots Guardians</h3>
+                    <p>Environmental protection starts with empowered locals. We work with village groups, schools, and women's cooperatives across Uganda.</p>
+                    <ul>
+                        <li><strong>Youth Conservation Clubs</strong> — Eco-education in 120+ schools</li>
+                        <li><strong>Women Green Groups</strong> — Briquette making &amp; tree nurseries</li>
+                        <li><strong>Kampala Clean-up Drive</strong> — monthly drain &amp; market cleanups</li>
+                        <li><strong>Eco-tourism &amp; Gorilla guardians</strong> — linking livelihoods to wildlife protection</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AIR POLLUTION -->
+    <section id="air">
+        <div class="container">
+            <h2>🌫️ Air Pollution Crisis</h2>
+            <p>PM2.5 levels in Uganda are 5x above WHO guidelines — affecting children, elderly, and urban populations.</p>
+            <div class="pollution-flex">
+                <div class="pollution-col cause">
+                    <h3>⚠️ Major Causes</h3>
+                    <ul>
+                        <li>🚗 Old boda-bodas &amp; vehicle fumes in Kampala</li>
+                        <li>🔥 Charcoal &amp; firewood burning</li>
+                        <li>🗑️ Open burning of plastic waste</li>
+                        <li>🏗️ Construction &amp; unpaved road dust</li>
+                    </ul>
+                </div>
+                <div class="pollution-col impact">
+                    <h3>💔 Impacts</h3>
+                    <ul>
+                        <li>Asthma, pneumonia, respiratory infections</li>
+                        <li>Reduced life expectancy by 2–3 years</li>
+                        <li>Smog &amp; low visibility in cities</li>
+                        <li>Accelerated climate change</li>
+                    </ul>
+                </div>
+                <div class="pollution-col solution">
+                    <h3>✅ Our Solutions</h3>
+                    <ul>
+                        <li>⚡ Promote electric bodas &amp; cleaner public transport</li>
+                        <li>🍳 Energy-saving stoves for households</li>
+                        <li>🌳 Urban forestry &amp; street tree planting</li>
+                        <li>📢 Enforce anti-open burning laws</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WATER POLLUTION -->
+    <section id="water">
+        <div class="container">
+            <h2>💧 Water Pollution Threat</h2>
+            <p>Over 47% of water sources in Uganda are contaminated, causing 70% of diseases like cholera and typhoid.</p>
+            <div class="pollution-flex">
+                <div class="pollution-col cause">
+                    <h3>⚠️ Causes</h3>
+                    <ul>
+                        <li>🏭 Untreated industrial effluent into lakes</li>
+                        <li>🧴 Agricultural runoff &amp; fertilizers</li>
+                        <li>🥤 Single-use plastic 'kaveera' clogging drainage</li>
+                        <li>🏞️ Wetland encroachment &amp; silting</li>
+                    </ul>
+                </div>
+                <div class="pollution-col impact">
+                    <h3>💥 Impacts</h3>
+                    <ul>
+                        <li>Waterborne diseases (cholera, dysentery)</li>
+                        <li>Fish kills &amp; declining Nile perch stocks</li>
+                        <li>High water treatment costs for NWSC</li>
+                        <li>Loss of tourism revenue on Lake Victoria</li>
+                    </ul>
+                </div>
+                <div class="pollution-col solution">
+                    <h3>✅ Solutions</h3>
+                    <ul>
+                        <li>🌾 Restore wetlands as natural filters</li>
+                        <li>🚯 Ban single-use plastics + recycling hubs</li>
+                        <li>🏭 Strict industrial pre-treatment laws</li>
+                        <li>🌊 Community-led riverbank restoration</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LAND & SOIL POLLUTION -->
+    <section id="land">
+        <div class="container">
+            <h2>⛰️ Land &amp; Soil Degradation</h2>
+            <p>46% of Uganda's land is degraded due to erosion, overgrazing, poor waste management, and chemical misuse.</p>
+            <div class="pollution-flex">
+                <div class="pollution-col cause">
+                    <h3>⚠️ Causes</h3>
+                    <ul>
+                        <li>🗑️ Overflowing landfills &amp; e-waste dumping</li>
+                        <li>🧪 Excessive pesticides &amp; chemical fertilizers</li>
+                        <li>🛢️ Oil spills in Albertine graben</li>
+                        <li>🌲 Deforestation on slopes (Elgon region)</li>
+                    </ul>
+                </div>
+                <div class="pollution-col impact">
+                    <h3>💥 Impacts</h3>
+                    <ul>
+                        <li>Declining crop yields &amp; food insecurity</li>
+                        <li>Deadly landslides (Bududa, Bundibugyo)</li>
+                        <li>Toxins entering food chain</li>
+                        <li>Loss of arable land for future generations</li>
+                    </ul>
+                </div>
+                <div class="pollution-col solution">
+                    <h3>✅ Solutions</h3>
+                    <ul>
+                        <li>♻️ Composting &amp; zero-waste villages</li>
+                        <li>🌿 Organic farming &amp; permaculture training</li>
+                        <li>🌳 Reforestation &amp; agroforestry projects</li>
+                        <li>📦 E-waste collection &amp; safe disposal</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+        <div class="container">
+            <h2>📬 Join The Movement</h2>
+            <p>Together we restore Uganda's environment. Reach out to volunteer, partner, or donate.</p>
+            <div class="contact-box">
+                <form id="ecoContactForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label>Full name</label>
+                        <input type="text" id="contactName" placeholder="e.g., Namugerwa Grace" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Email address</label>
+                        <input type="email" id="contactEmail" placeholder="hello@ecosafe.ug" required="">
+                    </div>
+                    <div class="form-group">
+                        <label>Message / Interest</label>
+                        <textarea id="contactMsg" rows="4" placeholder="I want to join clean-up campaigns / tree planting / school outreach ..." required=""></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width:100%; border:none; cursor:pointer; justify-content:center;">Send Message 🌱</button>
+                </form>
+                <div class="contact-info">
+                    <p><strong>🌍 Founder:</strong> GIRA JONATHAN HADRIAN</p>
+                    <p><strong>📧 Email:</strong> hadrian10100@gmail.com</p>
+                    <p><strong>📞 Phone:</strong> +256 791300065</p>
+                    <p><strong>📍 Office:</strong> Lira City, Uganda</p>
+                    <p><strong>💚 "For a Greener and a Safer Nation"</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>© 2026 Nature First Uganda# Nation — Pearl of Africa Initiative</p>
+        <p>Founded by <strong>GIRA JONATHAN HADRIAN</strong> • Empowering communities for environmental justice</p>
+    </div>
+</footer>
+
+<script>
+    // Mobile menu toggle
+    function toggleMenu() {
+        const navList = document.getElementById('nav-list');
+        navList.classList.toggle('show');
+    }
+
+    // Contact form handler with improved UX
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        const name = document.getElementById('contactName').value.trim();
+        const email = document.getElementById('contactEmail').value.trim();
+        const message = document.getElementById('contactMsg').value.trim();
+        
+        if (!name || !email || !message) {
+            alert("⚠️ Please fill all fields before sending.");
+            return;
+        }
+        
+        // Simple email pattern check
+        const emailPattern = /^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/;
+        if (!emailPattern.test(email)) {
+            alert("📧 Please enter a valid email address.");
+            return;
+        }
+        
+        // Success simulation
+        alert(`✅ Thank you ${name}! We've received your message and our team will respond within 48 hours.\n\nTogether we make Uganda safe.`);
+        
+        // reset form
+        document.getElementById('ecoContactForm').reset();
+    }
+    
+    // Add active highlight on scroll (optional aesthetic)
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("#nav-list a");
+    
+    window.addEventListener("scroll", () => {
+        let current = "";
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 140;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop && pageYOffset < sectionTop + sectionHeight) {
+                current = section.getAttribute("id");
+            }
+        });
+        navLinks.forEach(link => {
+            link.style.background = "rgba(255,255,255,0.05)";
+            if (link.getAttribute("href") === `#${current}`) {
+                link.style.background = "var(--accent-gold)";
+                link.style.color = "#1e3a1e";
+            } else {
+                link.style.color = "white";
+            }
+        });
+    });
+</script>
+
+</body></html>
